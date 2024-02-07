@@ -28,7 +28,8 @@ app.use('/images', express.static('images'));
 
 const PORT = 5001;
 
-const CONNECTION = "mongodb+srv://mrthangu:ashudb@hypervote.ylvas0d.mongodb.net/?retryWrites=true&w=majority";
+// const CONNECTION = "mongodb+srv://mrthangu:ashudb@hypervote.ylvas0d.mongodb.net/?retryWrites=true&w=majority";
+const CONNECTION = "mongodb://localhost:27017/society"
 mongoose
   .connect(CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Listening at Port ${PORT}`)))
